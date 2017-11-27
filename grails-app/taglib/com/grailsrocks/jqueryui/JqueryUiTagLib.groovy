@@ -1,6 +1,10 @@
 package com.grailsrocks.jqueryui
 
-class JqueryUiTagLib {
+import org.springframework.beans.BeansException
+import org.springframework.context.ApplicationContext
+import org.springframework.context.ApplicationContextAware
+
+class JqueryUiTagLib implements ApplicationContextAware {
 
     static namespace = "jqui"
 
@@ -130,5 +134,10 @@ class JqueryUiTagLib {
 
         def url = cdnUrlHandler."$t"(jqver, theme, min)
         out << resourceLink (attrs + [url:url])
+    }
+
+    @Override
+    void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        // nothing to do
     }
 }
