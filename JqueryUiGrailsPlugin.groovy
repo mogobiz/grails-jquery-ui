@@ -1,15 +1,13 @@
 class JqueryUiGrailsPlugin {
+    // the version attribute must be constant, so manually update this to be
+    // JQUERYUI_VERSION and PLUGIN_MINOR_REVISION concatenated, with a '.'
+    // if PLUGIN_MINOR_REVISION isn't blank
+	def version = "1.8.16" // added by Gradle
     // @todo This MUST be updated when you update the version of jquery ui
     static JQUERYUI_VERSION = "1.8.16"
 
     // Put in here the minor revision of this plugin
     static PLUGIN_MINOR_REVISION = ""
-
-    // the version attribute must be constant, so manually update this to be
-    // JQUERYUI_VERSION and PLUGIN_MINOR_REVISION concatenated, with a '.'
-    // if PLUGIN_MINOR_REVISION isn't blank
-    def version = '1.8.16'
-
 
     def grailsVersion = "1.3 > *"
     def title = "jQuery UI Plugin"
