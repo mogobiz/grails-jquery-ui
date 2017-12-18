@@ -8,3 +8,5 @@ plugin.xml
 web-app/WEB-INF
 plugins
 *.iml
+build
+buildPlugins
